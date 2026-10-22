@@ -1,6 +1,6 @@
 # Contexto do projeto (para o Claude Code)
 
-Site de portfólio da Mírian Bernardo, estrategista de marca e social media (nicho futuro: saúde). Página única em `index.html`, sem framework nem build.
+Site de portfólio da Mírian Bernardo, estrategista de marca e social media (nicho futuro: saúde). Página única em `index.html` mais duas páginas de case em `cases/`, sem framework nem build. O CSS fica em `assets/site.css` (compartilhado). Domínio: https://mirianbernardo.com.br (Vercel, deploy automático a cada push no `main`).
 
 ## Marca
 - Posicionamento: "Ajudo pequenas empresas a saírem do 'não sei o que postar' para uma comunicação com direção, que se sustenta na rotina e gera resposta."
@@ -21,3 +21,10 @@ Site de portfólio da Mírian Bernardo, estrategista de marca e social media (ni
 - No celular, "Onde trava" é um acordeão (o card abre dentro da frase).
 - Testado de 320px a 1920px, sem rolagem lateral. Respeitar `prefers-reduced-motion`.
 - Pendências: autorização da Duda Store e da Globalthings; plano de conteúdo de 4 semanas; trocar prévia da Duda por posts reais.
+
+## SEO e GEO (não remover)
+- `index.html` tem canonical, Open Graph/Twitter com URLs absolutas, JSON-LD (WebSite, Person, ProfessionalService, WebPage, FAQPage) e a seção "Perguntas frequentes" (`#faq`). O texto do FAQ no HTML e no JSON-LD deve ser sempre igual. Só escrever fatos reais.
+- `cases/globalthings.html` e `cases/duda-store.html` são páginas estáticas (URLs limpas: /cases/globalthings). O conteúdo espelha o array `CASES` em `index.html`: ao mudar um, mudar o outro. Nessas páginas usar caminhos absolutos (`/assets/...`).
+- `robots.txt` libera buscadores e rastreadores de IA. `sitemap.xml` e `llms.txt` listam as páginas: atualizar ao criar página nova.
+- `vercel.json`: cache imutável só para imagens em `assets/`; `site.css` não é imutável (mudou, atualiza).
+- Pendências de SEO: verificar o site no Google Search Console e no Bing Webmaster (colar o código de verificação em uma meta tag no head); redirect do www está 307 e deve ser 308 (painel da Vercel); declarar área de atuação nos dados estruturados quando a Mírian informar (online ou local).
