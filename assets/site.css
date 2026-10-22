@@ -442,4 +442,14 @@ footer { background: var(--ink); color: var(--on-dark-soft); padding-block: 36px
 .ig-main { background: var(--ink); color: var(--on-dark); padding: 14px 14px 14px 22px; }
 .ig-main:hover { background: #3a3027; }
 .ig-main .btn-dot { width: 48px; height: 48px; }
+.ig-cases { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ig-case { position: relative; display: block; border-radius: 22px; overflow: hidden; background: var(--ink); color: var(--on-dark); aspect-ratio: 4 / 5; transition: transform .4s var(--ease); }
+.ig-case img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.ig-case::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(41,34,27,.88) 0%, rgba(41,34,27,0) 68%); }
+.ig-case span { position: absolute; left: 16px; right: 12px; bottom: 14px; z-index: 1; }
+.ig-case small { display: block; font-size: 13px; opacity: .85; white-space: nowrap; }
+.ig-case b { display: block; font-family: var(--display); font-weight: 700; font-size: 19px; line-height: 1.15; }
+.ig-case > .icon { position: absolute; right: 10px; top: 10px; z-index: 1; width: 34px; height: 34px; padding: 8px; border-radius: 50%; background: rgba(239,241,235,.22); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #fff; }
+.ig-case:hover { transform: translateY(-2px); }
+.ig-case:hover img { transform: scale(1.04); }
 .ig-foot { margin-top: auto; padding-top: 8px; }
