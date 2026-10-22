@@ -414,3 +414,15 @@ footer { background: var(--ink); color: var(--on-dark-soft); padding-block: 36px
 .nav-simple .btn-line { white-space: nowrap; }
 @media (max-width: 480px) { .nav-simple .btn-line { padding: 10px 18px; font-size: 15px; } }
 .cp-cat, .cp-row h2 { color: #7A5E43; }
+.handle-l { display: inline-flex; align-items: center; gap: 12px; }
+.handle-l .icon { width: 22px; height: 22px; color: var(--gold); }
+.foot-ig { display: inline-flex; align-items: center; gap: 8px; }
+.foot-ig .icon { width: 18px; height: 18px; }
+/* 404 */
+.nf { min-height: 100svh; display: flex; align-items: center; padding-block: 140px 80px; }
+.nf .wrap { display: grid; gap: 22px; align-content: center; }
+.nf .wrap > * { max-width: 760px; }
+.nf h1 { font-weight: 800; font-size: clamp(44px, 8vw, 96px); line-height: 0.98; letter-spacing: -0.025em; }
+.nf h1 em { font-style: normal; color: var(--caramel); }
+.nf p { font-size: 19px; color: var(--ink-soft); max-width: 46ch; }
+.nf-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 28px; margin-top: 10px; }

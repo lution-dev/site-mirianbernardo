@@ -9,7 +9,7 @@ Site de portfólio da Mírian Bernardo, estrategista de marca e social media (ni
 - Voz: acolhedora, estratégica, objetiva. Português do Brasil.
 - Cores: #EFF1EB (fundo), #29221B (tinta), #8C6E51 (caramelo, só textos grandes e decoração), #C0A46F (dourado, destaque em fundo escuro).
 - Fontes: Bricolage Grotesque (títulos, 700/800) e Figtree (texto).
-- Monograma MB e logotipo em `assets/`.
+- Monograma MB e logotipo em `assets/`. Imagens em WebP (exceto `og.jpg`, que precisa ser JPG para redes sociais).
 
 ## Regras de texto
 - Sem travessões e sem frases de efeito acima dos títulos de seção (a Mírian não quer cara de IA).
@@ -24,7 +24,10 @@ Site de portfólio da Mírian Bernardo, estrategista de marca e social media (ni
 
 ## SEO e GEO (não remover)
 - `index.html` tem canonical, Open Graph/Twitter com URLs absolutas, JSON-LD (WebSite, Person, ProfessionalService, WebPage, FAQPage) e a seção "Perguntas frequentes" (`#faq`). O texto do FAQ no HTML e no JSON-LD deve ser sempre igual. Só escrever fatos reais.
-- `cases/globalthings.html` e `cases/duda-store.html` são páginas estáticas (URLs limpas: /cases/globalthings). Os cards da home são links para essas páginas (não há mais modal). O array `CASES` em `index.html` só alimenta os cards (título, resumo, imagens); o texto completo vive nas páginas. Nessas páginas usar caminhos absolutos (`/assets/...`).
+- `cases/globalthings.html` e `cases/duda-store.html` são páginas estáticas (URLs limpas: /cases/globalthings). Os cards da home são links HTML fixos para essas páginas (não há modal nem array CASES). O texto completo dos cases vive só nas páginas; ao criar um case novo, adicionar o card em `#caseGrid`, a página em `cases/`, e atualizar sitemap e llms.txt. As dores ("Onde trava") também são HTML fixo; o JS só liga os cliques. Nessas páginas usar caminhos absolutos (`/assets/...`).
 - `robots.txt` libera buscadores e rastreadores de IA. `sitemap.xml` e `llms.txt` listam as páginas: atualizar ao criar página nova.
 - `vercel.json`: cache imutável só para imagens em `assets/`; `site.css` não é imutável (mudou, atualiza).
 - Pendências de SEO: verificar o site no Google Search Console e no Bing Webmaster (colar o código de verificação em uma meta tag no head); redirect do www está 307 e deve ser 308 (painel da Vercel); declarar área de atuação nos dados estruturados quando a Mírian informar (online ou local).
+- Medição: `assets/track.js` registra cliques (whatsapp_click, instagram_click, case_open) no Vercel Web Analytics e `/_vercel/insights/script.js` carrega a medição. Só funciona depois de ligar Web Analytics no painel da Vercel (aba Analytics do projeto). Eventos personalizados podem exigir plano pago.
+- `404.html` é a página de erro (Vercel usa automaticamente).
+- Pendências que dependem da Mírian: autorizações, depoimento, e-mail de contato (alternativa ao WhatsApp), área de atuação, contas no Search Console e Bing, links externos.
