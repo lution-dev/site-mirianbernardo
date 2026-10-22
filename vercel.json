@@ -1,11 +1,53 @@
 {
   "cleanUrls": true,
   "headers": [
-    { "source": "/assets/(.*)\\.(jpg|jpeg|png|svg|webp)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
-    { "source": "/llms.txt", "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }] },
-    { "source": "/(.*)", "headers": [
-      { "key": "X-Content-Type-Options", "value": "nosniff" },
-      { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
-    ] }
+    {
+      "source": "/assets/(.*)\\.(jpg|jpeg|png|svg|webp)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/llms.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/ig",
+      "destination": "/?utm_source=instagram&utm_medium=bio&utm_campaign=perfil",
+      "permanent": false
+    },
+    {
+      "source": "/cases-ig",
+      "destination": "/?utm_source=instagram&utm_medium=bio&utm_campaign=cases#cases",
+      "permanent": false
+    },
+    {
+      "source": "/whatsapp",
+      "destination": "https://wa.me/5511917373372?text=Ol%C3%A1%2C%20M%C3%ADrian%21%20Vim%20pelo%20seu%20Instagram%20e%20quero%20conversar%20sobre%20a%20comunica%C3%A7%C3%A3o%20da%20minha%20marca.",
+      "permanent": false
+    }
   ]
 }
