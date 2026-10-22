@@ -35,11 +35,6 @@
   ],
   "redirects": [
     {
-      "source": "/ig",
-      "destination": "/?utm_source=instagram&utm_medium=bio&utm_campaign=perfil",
-      "permanent": false
-    },
-    {
       "source": "/cases-ig",
       "destination": "/?utm_source=instagram&utm_medium=bio&utm_campaign=cases#cases",
       "permanent": false
