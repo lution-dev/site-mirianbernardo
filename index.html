@@ -276,8 +276,8 @@ dialog::backdrop { background: rgba(41, 34, 27, 0.6); -webkit-backdrop-filter: b
 .dlg::-webkit-scrollbar { display: none; }
 .dlg-top { padding-right: 52px; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
 .dlg h3 { font-weight: 800; font-size: clamp(30px, 4vw, 46px); line-height: 1.02; letter-spacing: -0.02em; }
-.dlg-close { position: absolute; top: 14px; right: 14px; z-index: 5; background: var(--bg); box-shadow: 0 6px 18px -6px rgba(41,34,27,.35); width: 46px; height: 46px; border-radius: 50%; border: 1.5px solid var(--ink); display: grid; place-items: center; flex: none; transition: background .3s, color .3s, transform .4s var(--ease); }
-.dlg-close:hover { background: var(--ink); color: var(--on-dark); transform: rotate(90deg); }
+.dlg-close { position: absolute; top: 14px; right: 14px; z-index: 5; background: rgba(41, 34, 27, 0.6); -webkit-backdrop-filter: blur(14px) saturate(120%); backdrop-filter: blur(14px) saturate(120%); color: var(--on-dark); box-shadow: 0 8px 22px -10px rgba(41,34,27,.5); width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(239, 241, 235, 0.35); display: grid; place-items: center; flex: none; transition: background .3s, color .3s, transform .4s var(--ease); }
+.dlg-close:hover { background: rgba(41, 34, 27, 0.85); color: var(--gold); transform: rotate(90deg); }
 .dlg-grid { display: grid; gap: 22px; }
 .dlg-grid div { padding-top: 18px; border-top: 1px solid var(--line); }
 .dlg-grid b { display: block; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--caramel); margin-bottom: 6px; }
