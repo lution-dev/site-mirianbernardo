@@ -444,13 +444,15 @@ footer { background: var(--ink); color: var(--on-dark-soft); padding-block: 36px
 .ig-main { background: var(--ink); color: var(--on-dark); padding: 14px 14px 14px 22px; }
 .ig-main:hover { background: #3a3027; }
 .ig-main .btn-dot { width: 48px; height: 48px; }
-.ig-label { margin: 6px 4px -2px; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); opacity: .75; }
+.ig-label { margin: 6px 4px -2px; font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--ink); opacity: .75; }
 .ig-cases { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .ig-case { position: relative; display: block; border-radius: 22px; overflow: hidden; background: var(--ink); color: var(--on-dark); aspect-ratio: 4 / 5; transition: transform .4s var(--ease); }
 .ig-case img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
 .ig-case::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(41,34,27,.88) 0%, rgba(41,34,27,0) 68%); }
 .ig-case span { position: absolute; left: 16px; right: 12px; bottom: 14px; z-index: 1; }
 .ig-case small { display: block; font-size: 12px; opacity: .9; }
+.ig-case em { display: block; margin-top: 4px; font-style: normal; font-size: 12px; line-height: 1.3; opacity: .85; }
+.ig-who { margin: -6px 0 0; font-size: 15px; font-weight: 600; color: var(--caramel); text-align: center; }
 .ig-case b { display: block; font-family: var(--display); font-weight: 700; font-size: 19px; line-height: 1.15; }
 .ig-case > .icon { position: absolute; right: 10px; top: 10px; z-index: 1; width: 34px; height: 34px; padding: 8px; border-radius: 50%; background: rgba(239,241,235,.22); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #fff; }
 .ig-case:hover { transform: translateY(-2px); }
