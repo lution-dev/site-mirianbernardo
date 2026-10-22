@@ -267,7 +267,7 @@ section { padding-block: clamp(56px, 11vw, 150px); }
 }
 .cases-note { margin-top: 36px; font-size: 15px; color: var(--ink-soft); max-width: 60ch; }
 
-dialog { position: relative; border: 0; padding: 0; background: var(--bg); color: var(--ink); width: min(760px, calc(100% - 32px)); max-height: calc(100% - 48px); border-radius: 28px; overflow: hidden; }
+dialog { position: fixed; inset: 0; margin: auto; border: 0; padding: 0; background: var(--bg); color: var(--ink); width: min(760px, calc(100% - 32px)); max-height: calc(100% - 48px); border-radius: 28px; overflow: hidden; }
 dialog[open] { animation: pop .55s var(--ease); }
 dialog::backdrop { background: rgba(41, 34, 27, 0.6); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); animation: fadein .4s; }
 @keyframes pop { from { opacity: 0; transform: translateY(30px) scale(.97); } to { opacity: 1; transform: none; } }
