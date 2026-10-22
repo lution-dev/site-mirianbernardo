@@ -267,20 +267,22 @@ section { padding-block: clamp(56px, 11vw, 150px); }
 }
 .cases-note { margin-top: 36px; font-size: 15px; color: var(--ink-soft); max-width: 60ch; }
 
-dialog { border: 0; padding: 0; background: var(--bg); color: var(--ink); width: min(760px, calc(100% - 32px)); max-height: calc(100% - 48px); border-radius: 28px; overflow: hidden; }
+dialog { position: relative; border: 0; padding: 0; background: var(--bg); color: var(--ink); width: min(760px, calc(100% - 32px)); max-height: calc(100% - 48px); border-radius: 28px; overflow: hidden; }
 dialog[open] { animation: pop .55s var(--ease); }
 dialog::backdrop { background: rgba(41, 34, 27, 0.6); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); animation: fadein .4s; }
 @keyframes pop { from { opacity: 0; transform: translateY(30px) scale(.97); } to { opacity: 1; transform: none; } }
 @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
-.dlg { max-height: calc(100dvh - 48px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: none; padding: clamp(24px, 4vw, 48px); display: flex; flex-direction: column; gap: 26px; }
+.dlg { max-height: calc(100dvh - 48px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: none; overflow-x: hidden; padding: clamp(24px, 4vw, 48px); display: flex; flex-direction: column; gap: 26px; }
 .dlg::-webkit-scrollbar { display: none; }
-.dlg-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.dlg-top { padding-right: 52px; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
 .dlg h3 { font-weight: 800; font-size: clamp(30px, 4vw, 46px); line-height: 1.02; letter-spacing: -0.02em; }
-.dlg-close { width: 46px; height: 46px; border-radius: 50%; border: 1.5px solid var(--ink); display: grid; place-items: center; flex: none; transition: background .3s, color .3s, transform .4s var(--ease); }
+.dlg-close { position: absolute; top: 14px; right: 14px; z-index: 5; background: var(--bg); box-shadow: 0 6px 18px -6px rgba(41,34,27,.35); width: 46px; height: 46px; border-radius: 50%; border: 1.5px solid var(--ink); display: grid; place-items: center; flex: none; transition: background .3s, color .3s, transform .4s var(--ease); }
 .dlg-close:hover { background: var(--ink); color: var(--on-dark); transform: rotate(90deg); }
 .dlg-grid { display: grid; gap: 22px; }
 .dlg-grid div { padding-top: 18px; border-top: 1px solid var(--line); }
 .dlg-grid b { display: block; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--caramel); margin-bottom: 6px; }
+.dlg .btn { box-sizing: border-box; max-width: 100%; min-width: 0; white-space: normal; text-align: left; }
+.dlg .btn .dlg-cta-l { min-width: 0; flex: 1; line-height: 1.2; }
 .dlg-hint { padding: 14px 18px; border-radius: 14px; background: var(--bg-soft); font-size: 15px; color: var(--ink-soft); }
 
 /* serviços */
@@ -607,15 +609,15 @@ footer { background: var(--ink); color: var(--on-dark-soft); padding-block: 36px
 </footer>
 
 <dialog id="dlg" aria-labelledby="dlgTitle">
+  <button class="dlg-close" id="dlgClose" aria-label="Fechar"><svg class="icon" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
   <div class="dlg">
     <div class="dlg-top">
       <div><div class="eyebrow" id="dlgCat" style="margin-bottom:14px"></div><h3 id="dlgTitle"></h3></div>
-      <button class="dlg-close" id="dlgClose" aria-label="Fechar"><svg class="icon" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
     </div>
     <div id="dlgExtra" style="display:grid;gap:18px"></div>
     <div class="dlg-grid" id="dlgBody"></div>
     <div class="dlg-hint" id="dlgHint"></div>
-    <div><a class="btn" id="dlgCta" href="#" target="_blank" rel="noopener">Quero algo assim para a minha marca <span class="btn-dot"><svg class="icon" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg><svg class="icon" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></a></div>
+    <div><a class="btn" id="dlgCta" href="#" target="_blank" rel="noopener"><span class="dlg-cta-l">Quero algo assim para a minha marca</span> <span class="btn-dot"><svg class="icon" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg><svg class="icon" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></a></div>
   </div>
 </dialog>
 
