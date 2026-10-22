@@ -12,15 +12,16 @@ Site de portfólio da Mírian Bernardo, estrategista de marca e social media (ni
 - Monograma MB e logotipo em `assets/`. Imagens em WebP (exceto `og.jpg`, que precisa ser JPG para redes sociais).
 
 ## Regras de texto
+- Tom profissional e seguro: nada que sugira que ela está começando ("estou construindo", "em breve", "prévia"). Falar de método, entrega e experiência real.
 - Sem travessões e sem frases de efeito acima dos títulos de seção (a Mírian não quer cara de IA).
-- Não inventar números nem depoimentos. Métricas reais hoje: Globalthings foi de 270 para 5.564 seguidores. A Duda Store é case em andamento, sem resultados ainda.
+- Não inventar números nem depoimentos. Métricas reais hoje: Globalthings foi de 270 para 5.564 seguidores. A Duda Store é apresentada como portfólio (direção visual e plano de conteúdo), sem mencionar "em andamento", "prévia" ou resultados; não inventar números para ela.
 - Todos os CTAs abrem o WhatsApp com mensagem pronta e contextual.
 
 ## Pontos de atenção
 - A seção "O método" usa rolagem por posição (não IntersectionObserver): manter assim.
 - No celular, "Onde trava" é um acordeão (o card abre dentro da frase).
 - Testado de 320px a 1920px, sem rolagem lateral. Respeitar `prefers-reduced-motion`.
-- Pendências: autorização da Duda Store e da Globalthings; plano de conteúdo de 4 semanas; trocar prévia da Duda por posts reais.
+- Pendências: autorização da Duda Store e da Globalthings; plano de conteúdo de 4 semanas; trocar as artes da Duda por posts publicados quando existirem.
 
 ## SEO e GEO (não remover)
 - `index.html` tem canonical, Open Graph/Twitter com URLs absolutas, JSON-LD (WebSite, Person, ProfessionalService, WebPage, FAQPage) e a seção "Perguntas frequentes" (`#faq`). O texto do FAQ no HTML e no JSON-LD deve ser sempre igual. Só escrever fatos reais.
