@@ -174,7 +174,7 @@ section { padding-block: clamp(56px, 11vw, 150px); }
 .method-bar { height: 3px; background: var(--line); border-radius: 3px; overflow: hidden; max-width: 340px; }
 .method-bar i { display: block; height: 100%; width: 100%; background: var(--ink); transform: scaleX(0.25); transform-origin: left; transition: transform .8s var(--ease); }
 .steps { display: flex; flex-direction: column; }
-.step { min-height: 46vh; display: flex; flex-direction: column; justify-content: center; gap: 16px; padding-block: 32px; border-top: 1px solid var(--line); opacity: 0.32; transition: opacity .6s var(--ease); }
+.step { min-height: 46vh; display: flex; flex-direction: column; justify-content: center; gap: 16px; padding-block: 32px; border-top: 1px solid var(--line); opacity: 0.7; transition: opacity .6s var(--ease); }
 .step.is-on { opacity: 1; }
 .step h3 { font-weight: 800; font-size: clamp(38px, 5vw, 64px); line-height: 1; letter-spacing: -0.02em; }
 .step p { max-width: 46ch; font-size: 19px; }
