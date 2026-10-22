@@ -249,18 +249,6 @@
   </div>
 </footer>
 
-<dialog id="dlg" aria-labelledby="dlgTitle">
-  <button class="dlg-close" id="dlgClose" aria-label="Fechar"><svg class="icon" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
-  <div class="dlg">
-    <div class="dlg-top">
-      <div><div class="eyebrow" id="dlgCat" style="margin-bottom:14px"></div><h3 id="dlgTitle"></h3></div>
-    </div>
-    <div id="dlgExtra" style="display:grid;gap:18px"></div>
-    <div class="dlg-grid" id="dlgBody"></div>
-    <div class="dlg-hint" id="dlgHint"></div>
-    <div class="dlg-more-wrap"><a class="btn" id="dlgCta" href="#" target="_blank" rel="noopener"><span class="dlg-cta-l">Quero algo assim para a minha marca</span> <span class="btn-dot"><svg class="icon" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg><svg class="icon" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></a><a class="link-under dlg-more" id="dlgPage" href="#">Abrir a página completa do case</a></div>
-  </div>
-</dialog>
 
 <script>
 (function () {
@@ -278,13 +266,13 @@
     { q: 'Posto e ninguém engaja.', tag: 'Resultado', t: 'Menos suposição, mais resposta.', p: 'Acompanhamos poucas métricas que importam e ajustamos o conteúdo com base no que as pessoas respondem.', d: 'Métricas e ajustes' }
   ];
   var CASES = [
-    { id: 'gt', cat: 'Saúde e tecnologia', title: 'Globalthings', line: 'Identidade reconhecível no feed para um perfil B2B de saúde e tecnologia.', art: 'art-gt',
+    { id: 'gt', slug: 'globalthings', cat: 'Saúde e tecnologia', title: 'Globalthings', line: 'Identidade reconhecível no feed para um perfil B2B de saúde e tecnologia.', art: 'art-gt',
       tiles: '<div class="ph ph-a"><img src="assets/globalthings-6.jpg" alt="Carrossel da Globalthings: funcionar não é o mesmo que continuar adequado"></div><div class="ph ph-b"><img src="assets/globalthings-4.jpg" alt="Carrossel da Globalthings sobre a fila de ordens de serviço"></div>',
       metric: ['270 → 5.564', 'seguidores no Instagram: mais de 20 vezes o ponto de partida.'],
       gallery: [['assets/globalthings-4.jpg', 'Carrossel sobre ordens de serviço pendentes'], ['assets/globalthings-6.jpg', 'Capa de carrossel sobre equipamentos adequados'], ['assets/globalthings-1.jpg', 'Carrossel sobre rastreabilidade'], ['assets/globalthings-3.jpg', 'Carrossel sobre conformidade'], ['assets/globalthings-5.jpg', 'Post de grade com texto e fotos'], ['assets/globalthings-2.jpg', 'Cobertura fotográfica de evento']],
       rows: [['Desafio', 'Construir uma presença reconhecível e de autoridade no Instagram de uma empresa B2B de saúde e tecnologia, partindo de um perfil com 270 seguidores.'], ['O que foi feito', 'Identidade visual consistente para o perfil, com carrosséis e posts de autoridade sobre rastreabilidade, conformidade e manutenção de equipamentos hospitalares. Também fotografei e registrei a presença da marca em evento.'], ['Resultado', 'O perfil foi de 270 para 5.564 seguidores, e o feed passou a ser reconhecido pelo mesmo padrão visual.']],
       hint: 'Trabalho realizado como responsável pelas redes da Globalthings.' },
-    { id: 'duda', cat: 'Moda · em andamento', title: 'Duda Store', line: 'Feed com a cara da marca e conteúdo que leva a conversa para o WhatsApp.', art: 'art-duda', badge: 'Em andamento',
+    { id: 'duda', slug: 'duda-store', cat: 'Moda · em andamento', title: 'Duda Store', line: 'Feed com a cara da marca e conteúdo que leva a conversa para o WhatsApp.', art: 'art-duda', badge: 'Em andamento',
       tiles: '<div class="ph ph-a"><img src="assets/duda-store-3.jpg" alt="Prévia da direção visual da Duda Store: foto com a bolsa em destaque"></div><div class="ph ph-b"><img src="assets/duda-store-4.jpg" alt="Prévia de arte de Black Friday da Duda Store"></div>',
       gallery: [['assets/duda-store-1.jpg', 'Foto de campanha com o logo aplicado'], ['assets/duda-store-2.jpg', 'Story de Black Friday em formato de notificação'], ['assets/duda-store-3.jpg', 'Foto de produto em destaque'], ['assets/duda-store-4.jpg', 'Post de Black Friday'], ['assets/duda-store-5.jpg', 'Foto de vitrine com paleta da marca'], ['assets/duda-store-6.jpg', 'Post de oferta por tempo limitado']],
       rows: [['Desafio', 'Uma loja de moda feminina com ambiente acolhedor, dona presente e canal direto no WhatsApp, que precisa de um feed com a cara da marca e de uma jornada clara: conhecer, confiar e comprar.'], ['O que foi feito', 'Parceria criativa de três meses, de novembro a janeiro. Marca: ajuste da identidade visual, kit de templates editáveis, nova bio e destaques. Conteúdo: 9 posts estratégicos por mês (3 reels, 3 posts únicos e 3 carrosséis), 2 stories por semana com CTA para o WhatsApp, e cronograma mensal com roteiros e legendas.'], ['Resultado', 'A parceria começa em 1º de novembro. Vamos acompanhar alcance, salvamentos, cliques no WhatsApp e seguidores, com o ponto de partida registrado no primeiro mês. Os resultados entram aqui quando existirem.']],
@@ -356,8 +344,8 @@
   function setupCases() {
     var grid = $('#caseGrid');
     CASES.forEach(function (c) {
-      var el = document.createElement('button');
-      el.className = 'case reveal'; el.dataset.id = c.id; el.type = 'button';
+      var el = document.createElement('a');
+      el.className = 'case reveal'; el.dataset.id = c.id; el.href = '/cases/' + c.slug;
       el.innerHTML = '<div class="case-art ' + c.art + '">' + (c.badge ? '<span class="case-badge">' + c.badge + '</span>' : '') + c.tiles + '</div>' +
         '<div class="case-info"><div><small>' + c.cat + '</small><h3>' + c.title + '</h3><p>' + c.line + '</p></div><span class="case-go">' + ARROW + '</span></div>';
       var art = $('.case-art', el);
@@ -369,7 +357,6 @@
         });
         el.addEventListener('mouseleave', function () { art.style.transform = ''; });
       }
-      el.addEventListener('click', function () { openCase(c); });
       grid.appendChild(el);
     });
     var wa = 'https://wa.me/5511917373372?text=' + encodeURIComponent('Olá, Mírian! Vi os seus cases e quero que a minha marca seja o próximo. Podemos conversar?');
@@ -391,24 +378,6 @@
         });
       });
     });
-  }
-  var dlg;
-  function openCase(c) {
-    $('#dlgCat').textContent = c.cat; $('#dlgTitle').textContent = c.title;
-    var x = '';
-    if (c.metric) x += '<div class="dlg-metric"><b>' + c.metric[0] + '</b><span>' + c.metric[1] + '</span></div>';
-    if (c.gallery) x += '<div class="dlg-gal">' + c.gallery.map(function (g) { return '<img src="' + g[0] + '" alt="' + g[1] + '">'; }).join('') + '</div>';
-    $('#dlgExtra').innerHTML = x;
-    $('#dlgBody').innerHTML = c.rows.map(function (r) { return '<div><b>' + r[0] + '</b><p>' + r[1] + '</p></div>'; }).join('');
-    $('#dlgHint').textContent = c.hint || '';
-    $('#dlgPage').href = '/cases/' + (c.id === 'gt' ? 'globalthings' : 'duda-store');
-    $('#dlgCta').href = 'https://wa.me/5511917373372?text=' + encodeURIComponent('Olá, Mírian! Vi o case ' + c.title + ' no seu site e quero algo parecido para a minha marca.');
-    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
-  }
-  function setupDialog() {
-    dlg = $('#dlg');
-    $('#dlgClose').addEventListener('click', function () { dlg.close(); });
-    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
   }
 
   /* nav, progresso, menu */
@@ -496,7 +465,7 @@
     });
   }
 
-  setupPains(); setupMethod(); setupCases(); setupDialog(); setupNav(); setupPointer(); setupParallax(); setupQuote();
+  setupPains(); setupMethod(); setupCases(); setupNav(); setupPointer(); setupParallax(); setupQuote();
   /* reveals por último, depois de montar o conteúdo dinâmico */
   setupReveal();
 })();

@@ -24,7 +24,7 @@ Site de portfólio da Mírian Bernardo, estrategista de marca e social media (ni
 
 ## SEO e GEO (não remover)
 - `index.html` tem canonical, Open Graph/Twitter com URLs absolutas, JSON-LD (WebSite, Person, ProfessionalService, WebPage, FAQPage) e a seção "Perguntas frequentes" (`#faq`). O texto do FAQ no HTML e no JSON-LD deve ser sempre igual. Só escrever fatos reais.
-- `cases/globalthings.html` e `cases/duda-store.html` são páginas estáticas (URLs limpas: /cases/globalthings). O conteúdo espelha o array `CASES` em `index.html`: ao mudar um, mudar o outro. Nessas páginas usar caminhos absolutos (`/assets/...`).
+- `cases/globalthings.html` e `cases/duda-store.html` são páginas estáticas (URLs limpas: /cases/globalthings). Os cards da home são links para essas páginas (não há mais modal). O array `CASES` em `index.html` só alimenta os cards (título, resumo, imagens); o texto completo vive nas páginas. Nessas páginas usar caminhos absolutos (`/assets/...`).
 - `robots.txt` libera buscadores e rastreadores de IA. `sitemap.xml` e `llms.txt` listam as páginas: atualizar ao criar página nova.
 - `vercel.json`: cache imutável só para imagens em `assets/`; `site.css` não é imutável (mudou, atualiza).
 - Pendências de SEO: verificar o site no Google Search Console e no Bing Webmaster (colar o código de verificação em uma meta tag no head); redirect do www está 307 e deve ser 308 (painel da Vercel); declarar área de atuação nos dados estruturados quando a Mírian informar (online ou local).
