@@ -395,15 +395,7 @@
   }
   function setupParallax() {
     if (reduce) return;
-    var a = $('#heroImg'), b = $('#aboutImg'), ph = $('#heroPhoto');
-    function frame() {
-      [[a, 0.06], [b, 0.05]].forEach(function (p) {
-        var el = p[0]; if (!el) return; var r = el.parentNode.getBoundingClientRect();
-        if (r.bottom < 0 || r.top > window.innerHeight) return;
-        var c = (r.top + r.height / 2 - window.innerHeight / 2); el.style.transform = 'translateY(' + (-c * p[1] - 10) + 'px)';
-      });
-    }
-    window.addEventListener('scroll', frame, { passive: true }); frame();
+    var ph = $('#heroPhoto');
     if (fine && ph) {
       ph.addEventListener('mousemove', function (e) { var r = ph.getBoundingClientRect(); var x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5; ph.style.setProperty('--tx', x); ph.firstElementChild.style.transform = 'translate(' + (x * 14) + 'px,' + (y * 14) + 'px)'; });
       ph.addEventListener('mouseleave', function () { ph.firstElementChild.style.transform = ''; });
