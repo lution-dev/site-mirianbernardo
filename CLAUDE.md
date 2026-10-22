@@ -14,7 +14,7 @@ Site de portfólio da Mírian Bernardo, estrategista de marca e social media (ni
 ## Regras de texto
 - Tom profissional e seguro: nada que sugira que ela está começando ("estou construindo", "em breve", "prévia"). Falar de método, entrega e experiência real.
 - Sem travessões e sem frases de efeito acima dos títulos de seção (a Mírian não quer cara de IA).
-- Não inventar números nem depoimentos. Métricas reais hoje: Globalthings foi de 270 para 5.564 seguidores. A Duda Store é apresentada como portfólio (direção visual e plano de conteúdo), sem mencionar "em andamento", "prévia" ou resultados; não inventar números para ela.
+- Não inventar números nem depoimentos. Métrica real: Globalthings foi de 270 para 5.564 seguidores (20,6x). No site, mostrar só "audiência 20 vezes maior", sem os números absolutos (decisão da Mírian). A Duda Store é apresentada como portfólio (direção visual e plano de conteúdo), sem mencionar "em andamento", "prévia" ou resultados; não inventar números para ela.
 - Todos os CTAs abrem o WhatsApp com mensagem pronta e contextual.
 
 ## Pontos de atenção
