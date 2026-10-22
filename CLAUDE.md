@@ -4,6 +4,7 @@ Site de portfólio da Mírian Bernardo, estrategista de marca e social media (ni
 
 ## Marca
 - Posicionamento: "Ajudo pequenas empresas a saírem do 'não sei o que postar' para uma comunicação com direção, que se sustenta na rotina e gera resposta."
+- Subtítulo da hero (site): "Estratégia de conteúdo para pequenas empresas: um plano simples, que cabe na sua rotina e faz sua marca ser vista e lembrada." (a frase de posicionamento acima fica para o guia de marca e a seção Sobre).
 - Método: Clareza, Criação, Rotina, Resultado.
 - Voz: acolhedora, estratégica, objetiva. Português do Brasil.
 - Cores: #EFF1EB (fundo), #29221B (tinta), #8C6E51 (caramelo, só textos grandes e decoração), #C0A46F (dourado, destaque em fundo escuro).
